@@ -1,0 +1,12 @@
+{
+  "DBDriver": "mysql",
+  "DBName": "MHK",
+  "DBUser": "MHK",
+  "DBPassword": "Password",
+  "DBProtocol": "unix",
+  "DBAddress": "/var/run/mysqld/mysqld.sock",
+  "DBCharset": "utf8mb4",
+  "Pin": "12344321",
+  "Port": "12356",
+  "StoragePath": "/home/homekit/db"
+}
