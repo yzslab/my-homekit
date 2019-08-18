@@ -41,7 +41,7 @@ func main() {
 		log.Info.Fatalf("%s", err)
 	}
 	shincoIRThermostat := ac.NewIRThermostat("shinco", accessory.Info{
-		Name: "Shinco",
+		Name:         "Shinco",
 		SerialNumber: "thermostat.shinco",
 	}, ac.ShincoCodeFactory, sht31Sensor.TemperatureSensor.TempSensor.CurrentTemperature.GetValue(), 23, 25)
 
@@ -90,11 +90,11 @@ func createDBSensor(db *sql.DB, table string, name string) (*sensor.TemperatureH
 	}
 
 	temperatureSensorAccessory := sensor.NewTemperatureSensor(accessory.Info{
-		Name: name,
+		Name:         name,
 		SerialNumber: fmt.Sprintf("sensor.%st", table),
 	}, temperature, 0, 100, 0.1)
 	humiditySensorAccessory := sensor.NewHumiditySensor(accessory.Info{
-		Name: name,
+		Name:         name,
 		SerialNumber: fmt.Sprintf("sensor.%sh", table),
 	}, relativeHumidity, 0, 100, 0.1)
 
