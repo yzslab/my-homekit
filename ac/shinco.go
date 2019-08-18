@@ -11,6 +11,8 @@ func ShincoCodeFactory(irThermostat *IRThermostat, state int, temperature float6
 		code = "off"
 	} else if state != characteristic.CurrentHeatingCoolingStateHeat {
 		code = fmt.Sprintf("%.0f", irThermostat.irThermostatAccessory.Thermostat.TargetTemperature.GetValue()) + "c"
+	} else {
+		return nil
 	}
 	return &code
 }

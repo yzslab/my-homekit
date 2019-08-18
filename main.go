@@ -73,7 +73,7 @@ func main() {
 	t.Start()
 }
 
-func createDB(configValue *config) (db *sql.DB, err error) {
+func createDB(configValue *MyHomeKitConfig) (db *sql.DB, err error) {
 	db, err = sql.Open(configValue.DBDriver, configValue.dbDataSourceName())
 	return
 }
