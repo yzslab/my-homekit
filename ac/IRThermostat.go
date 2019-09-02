@@ -57,5 +57,10 @@ func (irThermostat *IRThermostat) irsend(code string) {
 	err := cmd.Start()
 	if err != nil {
 		log.Info.Println(err)
+		return
+	}
+	err = cmd.Wait()
+	if err != nil {
+		log.Info.Printf("irsend exited with error: %v", err)
 	}
 }
